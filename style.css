@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF9C4; /* 明るい黄色 */
+    color: #333;
+    min-height: 100vh; /* ビューポートの高さに基づく最小高さ */
+    display: flex;
+    flex-direction: column;
+}
+/* 全てのボタンの共通スタイリング */
+button {
+    background-color: #FFB6C1; /* 淡いピンク色 */
+    color: white;
+    border: none;
+    border-radius: 25px; /* 丸みを帯びたボーダー */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    outline: none;
+    margin: 10px; /* 余白を追加 */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* 可愛らしいフォント */
+}
+
+/* ホバー時のスタイリング */
+button:hover {
+    background-color: #FF69B4; /* やや濃いピンク色 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* フォーカス時のスタイリング */
+button:focus {
+    outline: 2px solid #FFC0CB; /* 輪郭線を追加 */
+}
+
+.door {
+    position: fixed;
+    width: 50vw; /* ビューポート幅の50% */
+    height: 100vh; /* ビューポート高さの100% */
+    background-color: #fff; /* 豪華な背景色または背景画像を設定 */
+    background-image: url('door.webp'); /* 豪華な扉の画像を設定 */
+    background-size: cover;
+    z-index: 1000; /* 他の要素より前面に表示 */
+    transition: transform 5s; /* アニメーション効果 */
+}
+
+#doorLeft {
+    left: 0;
+    transform: translateX(0);
+}
+
+#doorRight {
+    right: 0;
+    transform: translateX(0); /* 右側扉の開き方 */
+}
+
+header {
+    background-color: #FFEB3B; /* 鮮やかな黄色 */
+    color: #000080;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+	color: #000080;
+	text-align: center;
+}
+#agreement{
+	display: none;	
+    padding: 0; /* デフォルトのパディングを消去 */
+    font-size: 1.2em; /* テキストサイズを大きくする */
+    text-align: center; /* テキストを左揃えに */
+    margin: 0 auto; /* 上下のマージンを自動に設定 */
+}
+
+#agreement label {
+    display: block; /* ブロックレベルの要素として表示 */
+    margin-bottom: 10px; /* 各ラベルの間に余白を設定 */
+    
+    width: 100%; /* リストアイテムの幅を設定 */
+}
+
+
+/* お手紙ボタンのスタイリング */
+#agreementButton {
+    background-color: #FF6F61; /* 明るいコーラルピンク */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#agreementButton:hover {
+    background-color: #FF6347; /* トマトレッド */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#agreementButton:focus {
+    outline: none;
+}
+
+
+#agreementbutton{
+	display: none;
+}
+
+#letter {
+    position: fixed;
+    top: 10%; /* 上部からの位置を調整 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 上部が見切れないように調整 */
+    max-height: 80%; /* 最大高さを設定 */
+    overflow-y: auto; /* 内容が多い場合にスクロール可能に */
+    background-color: #FFEFF1; /* 淡いピンク色の背景 */
+    padding: 30px;
+    border: 3px solid #FFC0CB; /* 明るいピンクの枠線 */
+    border-radius: 15px; /* 角をより丸くする */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 大きめのシャドウを追加 */
+    display: none;
+    z-index: 1000; 
+    transition: top 3s ease;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* より可愛らしいフォントに */
+    color: #333;
+    line-height: 1.6;
+}
+
+#letter p {
+    margin-bottom: 20px; /* 段落間の余白をさらに調整 */
+    color: #6B1E2A; /* ダークピンクのテキストカラー */
+}
+
+#letter h3 {
+    color: #FF69B4; /* 明るいピンクのタイトル色 */
+    margin-bottom: 20px;
+}
+
+#aporogy{
+    margin-top: 10%;
+	size: 150%;
+	color: #000080;
+	text-align: center;
+}
+
+#cheesecakeImage {
+    max-width: 50%; /* 画像の最大幅を設定 */
+    height: auto; /* 高さは自動で調整 */
+    display: block; /* ブロック要素として表示 */
+    margin: 20px auto; /* 上下のマージンを設定し、中央揃えに */
+}
+
+footer {
+    background-color: #FFEB3B;
+    color: #000080;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    #letter {
+        width: 90%; /* 小さい画面では幅を広げる */
+        left: 5%; /* 中央配置から変更 */
+        transform: translate(0, 0); /* 幅が広がったので変形を調整 */
+    }
+}
